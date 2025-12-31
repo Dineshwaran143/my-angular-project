@@ -1,0 +1,130 @@
+/* Full cinematic background */
+.proposal-scene {
+    height: 100vh;
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80");
+    /* example image: silhouette proposal, replace with your provided image if needed:
+       background-image: url('URL_TO_YOUR_UPLOADED_IMAGE'); 
+    */
+    background-size: cover;
+    background-position: center bottom;
+    position: relative;
+    overflow: hidden;
+    animation: sunsetZoom 25s ease-in-out infinite;
+  }
+  
+  /* Slow emotional zoom */
+  @keyframes sunsetZoom {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.12); }
+  }
+  
+  /* Dark romantic overlay */
+  .dark-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.65)
+    );
+  }
+  
+  /* Center proposal text */
+  .proposal-text {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    max-width: 640px;
+    padding: 24px;
+    animation: softAppear 2.8s ease forwards;
+  }
+  
+  @keyframes softAppear {
+    from { opacity: 0; transform: translate(-50%, -42%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+  }
+  
+  /* Name */
+  .name {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+  }
+  
+  /* Heart beat */
+  .heart {
+    display: inline-block;
+    animation: heartbeat 1.5s infinite;
+  }
+  
+  @keyframes heartbeat {
+    0% { transform: scale(1); }
+    30% { transform: scale(1.35); }
+    50% { transform: scale(1); }
+    70% { transform: scale(1.25); }
+    100% { transform: scale(1); }
+  }
+  
+  /* Emotional text lines */
+  .line {
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 14px 0;
+    opacity: 0;
+    animation: lineReveal 1.6s ease forwards;
+  }
+  
+  .l1 { animation-delay: 1.8s; }
+  .l2 { animation-delay: 3.6s; }
+  .l3 { animation-delay: 5.4s; }
+  
+  @keyframes lineReveal {
+    from { opacity: 0; transform: translateY(22px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Proposal question */
+  .question {
+    margin-top: 36px;
+    font-size: 36px;
+    color: #ffd6e8;
+    opacity: 0;
+    animation: glowRise 2s ease forwards;
+    animation-delay: 7.2s;
+  }
+  
+  @keyframes glowRise {
+    from { opacity: 0; transform: scale(0.9); }
+    to {
+      opacity: 1;
+      transform: scale(1);
+      text-shadow: 0 0 35px rgba(255, 160, 200, 1);
+    }
+  }
+  
+  /* Floating love particles */
+  .love-particle {
+    position: absolute;
+    bottom: -40px;
+    font-size: 28px;
+    animation: floatLove 12s linear infinite;
+    opacity: 0.8;
+  }
+  
+  .love-particle:nth-child(3) { left: 20%; animation-duration: 10s; }
+  .love-particle:nth-child(4) { left: 50%; animation-duration: 12s; }
+  .love-particle:nth-child(5) { left: 75%; animation-duration: 14s; }
+  
+  @keyframes floatLove {
+    0% { transform: translateY(0) scale(1); opacity: 0; }
+    20% { opacity: 1; }
+    100% {
+      transform: translateY(-120vh) scale(1.6);
+      opacity: 0;
+    }
+  }
+  
